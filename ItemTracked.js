@@ -37,6 +37,7 @@ exports.ItemTracked = function(properties, frameNb, unMatchedFramesTolerance, fa
   itemTracked.nameCount = {};
   itemTracked.nameCount[properties.name] = 1;
   // ==== Public =====
+  itemTracked.detection = properties.detection;
   itemTracked.x = properties.x;
   itemTracked.y = properties.y;
   itemTracked.w = properties.w;
