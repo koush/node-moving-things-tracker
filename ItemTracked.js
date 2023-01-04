@@ -1,4 +1,3 @@
-var uuidv4 = require('uuid/v4');
 var computeBearingIn360 = require('./utils').computeBearingIn360
 var computeVelocityVector = require('./utils').computeVelocityVector
 
@@ -60,7 +59,7 @@ exports.ItemTracked = function(properties, frameNb, unMatchedFramesTolerance, fa
   };
   itemTracked.nbTimeMatched = 1;
   // Assign an unique id to each Item tracked
-  itemTracked.id = uuidv4();
+  itemTracked.id = Math.random().toString(36).substring(2);
   // Use an simple id for the display and debugging
   itemTracked.idDisplay = idDisplay;
   idDisplay++
